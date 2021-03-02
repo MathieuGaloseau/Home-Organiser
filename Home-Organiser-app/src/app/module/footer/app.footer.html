@@ -1,13 +1,35 @@
-<ngx-bottom-nav>
-  <button ngx-bottom-nav label="Home" routerLink="/">
-    <mat-icon ngxBottomNavIcon i18n="@@home">home</mat-icon>
-  </button>
 
-  <button ngx-bottom-nav label="Search" routerLink="/search">
-    <mat-icon ngxBottomNavIcon i18n="@@search">search</mat-icon>
-  </button>
+<ngx-bottom-nav class="footer-nav">
+    <button ngx-bottom-nav label="" routerLink="/home">
+      <mat-icon ngxBottomNavIcon i18n="@@home" mat-raised-button matBadge="7">home</mat-icon>
+    </button>
+    <button ngx-bottom-nav label="" routerLink="/favorite">
+      <mat-icon ngxBottomNavIcon i18n="@@favorite">star_rate</mat-icon>
+    </button>
+    <button ngx-bottom-nav label="" routerLink="/search">
+      <mat-icon ngxBottomNavIcon i18n="@@search">search</mat-icon>
+    </button>
+    <button ngx-bottom-nav label="" routerLink="/add-object">
+      <mat-icon ngxBottomNavIcon i18n="@@add">add</mat-icon>
+    </button>
+    <button ngx-bottom-nav label="" [matMenuTriggerFor]="menu">
+      <mat-icon ngxBottomNavIcon i18n="@@menu">menu</mat-icon>
+    </button>
+  </ngx-bottom-nav>
 
-  <button ngx-bottom-nav label="add" routerLink="/add">
-    <mat-icon ngxBottomNavIcon i18n="@@add">add</mat-icon>
-  </button>
-</ngx-bottom-nav>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item disabled>
+      <mat-icon>construction</mat-icon>
+      <span i18n="@@about">paramètre</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>support_agent</mat-icon>
+      <span i18n="@@urlgit">lien ver le git</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>power_settings_new</mat-icon>
+      <span i18n="@@logoff">Log Off</span>
+    </button>
+  </mat-menu>
+  
+
