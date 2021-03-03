@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+$dark-theme: false !default;
+$primary-color: #0e4c9c !default;
+$accent-color: #0a355f !default;
+$background-color: #3f4f64 !default;
+
+@if $dark-theme {
+  $primary-color: darken($primary-color, 60%);
+  $accent-color: lighten($accent-color, 60%);
+  $background-color: darken($background-color, 60%);
+}

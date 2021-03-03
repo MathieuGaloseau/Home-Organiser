@@ -1,4 +1,11 @@
+@import 'styles.vars';
+
 .example-full-width
 {
     padding: 5px;
+}
+
+.add-object-button
+{
+   background-color: $primary-color;
 }
